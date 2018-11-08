@@ -1,3 +1,3 @@
 # MasterThesis
 
-lol
+A more impressive thesis than Sigve and Thomas'
