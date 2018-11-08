@@ -1,0 +1,130 @@
+% (C) Anders Kofod-Petersen
+\documentclass[a4paper]{book}
+\usepackage[english]{babel}						% Correct English hyphenation
+\usepackage[latin1]{inputenc}						% Allow for non-English letters
+\usepackage{graphicx}							% To include graphics
+\usepackage{natbib}								% Correct citations
+%\usepackage{fancyheadings}						% Nice header and footer
+\usepackage[linktocpage,colorlinks]{hyperref}			% PDF hyperlink
+\usepackage{geometry} 							% Better geometry
+%\usepackage[center]					% For cropping documents
+
+% B5 (uncomment to convert to B5 format)
+ \geometry{b5paper}
+
+% Author
+% Fill in here, and use commands in the text. 
+\newcommand{\thesisAuthor}{Eirik Baug and Andreas Norstein}
+\newcommand{\thesisTitle}{The best title in the world}
+\newcommand{\thesisType}{master project}
+\newcommand{\thesisDate}{spring 2019}
+
+% PDF info
+\hypersetup{pdfauthor={\thesisAuthor}}
+\hypersetup{pdftitle={\thesisTitle}}
+\hypersetup{pdfsubject={\thesisType}}
+\hypersetup{linkcolor=black}
+\hypersetup{citecolor=black}
+\hypersetup{urlcolor=black}
+
+%Fancy headings
+%\pagestyle{fancy}
+%\pagestyle{fancyplain}
+%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+%\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+%\lhead[\fancyplain{}{\thepage}]{\fancyplain{}{\let\uppercase\relax\leftmark}}
+%\rhead[\fancyplain{}{\let\uppercase\relax\rightmark}]{\fancyplain{}{\thepage}}
+%\chead[\fancyplain{}{}]{\fancyplain{}{}}
+%\lfoot[\fancyplain{}{}]{\fancyplain{}{}}
+%\cfoot[\fancyplain{}{}]{\fancyplain{}{}}
+%\rfoot[\fancyplain{}{}]{\fancyplain{}{}}
+
+% Citation format
+\bibliographystyle{apalike}
+\bibpunct{[}{]}{;}{a}{,}{,}
+
+\begin{document}
+
+%Title page (This is generate automatically from the commands above)
+\begin{titlepage}
+\noindent {\large \textbf{\thesisAuthor}}
+\vspace{2cm}
+
+\noindent {\Huge \thesisTitle}
+\vspace{2cm}
+
+\noindent \thesisType, \thesisDate 
+\vspace{2cm}
+
+\noindent Artificial Intelligence Group\\ Department of Computer and Information Science\\ Faculty of Information Technology, Mathematics and Electrical Engineering\\
+
+\vfill
+\begin{center}
+\includegraphics[width=3cm]{figs/NTNUlogo.pdf}
+\end{center}
+\end{titlepage}
+
+\thispagestyle{empty}
+
+\cleardoublepage
+
+\frontmatter
+
+\section*{Abstract}
+
+This paper provides a template for writing AI project rapports for either the AI specialisation project; masters "datateknikk" or masters "informatikk". The use of the template is recommended and is written in english as we encourage students to submit their project and masters theses in English. 
+The template does not form a compulsory style that you are obliged to use. However, the format and contents are a result of a joint AI group initiative thus providing a common starting point for all AI students. For a given project tuning of the template may still be required. Such tuning might involve moving a chapter to a section or vice versa due to the nature of the project..
+
+The abstract is your sales pitch which encourages people to read your work but unlike sales it should be realistic with respect to the contributions of the work. It should include:
+\begin{itemize}
+\item the field of research
+\item a brief motivation for the work
+\item what the research topic is and
+\item the research approach(es) applied. 
+\item contributions
+\end{itemize}
+
+The abstract length should be roughly half a page of text --- without lists, tables or figures.  
+
+\clearpage
+
+\section*{Preface}
+
+
+
+\vspace{1cm}
+
+The preface includes the facts - what type of project, where it is conducted, who supervised and any acknowledgements you wish to give. 
+
+\vfill
+
+\hfill \thesisAuthor
+
+\hfill Trondheim, \today
+
+\clearpage
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\mainmatter
+\input{./chapters/chapter1-introduction.tex}	
+\input{./chapters/chapter2-Background-Theory-and-Motivation.tex}
+\input{./chapters/chapter3-model.tex}
+\input{./chapters/chapter4-experiments-and-results.tex}
+\input{./chapters/chapter5-evaluation-and-conclusion.tex}
+
+
+\backmatter
+
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{bibtex/bibliography}
+
+\chapter{Appendices}
+\label{cha:appendices}
+
+
+\end{document}
